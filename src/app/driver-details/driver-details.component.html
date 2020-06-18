@@ -1,0 +1,37 @@
+<h2>Driver Details</h2> 
+
+<hr/>
+<div *ngIf="driver">
+  <div>
+    <label><b>First Name: </b></label> {{driver.firstName}}
+  </div>
+  <div>
+    <label><b>Last Name: </b></label> {{driver.lastName}}
+  </div>
+  <div>
+    <!-- <label><b>Category: </b></label> {{driver.category}} -->
+    <!-- <label><b>Category: </b></label> -->
+
+    <!-- <div *ngIf="category"><div>
+      <label><b>category </b></label> {{category.text}}
+    </div> -->
+  </div>
+  </div>   
+
+  <div *ngFor="let category of categorys"><div>
+    <label><b>Category </b></label> {{category.text}}
+  </div>
+
+
+
+
+  
+
+</div> 
+<br>
+<br>
+<button (click)="addcategory(driver.id)" class="btn btn-danger">Add cateogry for this driver!</button>
+<button (click)="removecategory(driver.id)" class="btn btn-danger">Delete</button>
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Driver List</button><br>

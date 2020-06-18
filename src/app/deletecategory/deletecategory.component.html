@@ -1,0 +1,40 @@
+<!-- <h2>category Details</h2> 
+
+<hr/>
+<div *ngIf="category">
+  <div>
+    <label><b>Category </b></label> {{category.text}}
+  </div>
+ 
+            <td><button (click)="deletecategory(category.id)" class="btn btn-danger">Delete</button>
+             
+                
+   -->
+
+   <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Driver List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>All category for this driver:</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let category of categorys | async">
+          
+            <td>{{category.text}}</td>
+           
+            <td>
+                <button (click)="deleteCategory(category.id)" class="btn btn-danger">Delete</button>
+              
+                
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

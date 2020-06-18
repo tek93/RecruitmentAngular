@@ -1,0 +1,13 @@
+<h3>Create Category For driver!</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Category</label>
+      <input type="text" class="form-control" id="text" required [(ngModel)]="category.text" name="text">
+    </div>
+
+ 
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
